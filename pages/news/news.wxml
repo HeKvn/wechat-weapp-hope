@@ -1,6 +1,15 @@
 <view class="top_module">
-  <view class="text">+</view>
+  <view class="text" bindtap="isOnFn">+</view>
 </view>
+
+<!-- 浮动的创建栏 -->
+<view class="fixed_moudle">
+  <view wx:if="{{isOn}}" class="isOn">
+    <view class="operate" bindtap="createMetting">创建会议</view>
+    <view class="operate">预约会议</view>
+  </view>
+</view>
+
 
 <!-- 信息板块 -->
 <block>

@@ -58,7 +58,8 @@ Page({
     },{
       name:'[思考]',
       imgSrc:'../../img/16.png'
-    }]
+    }],
+    room_id:null
   },
 
   // 点击录音开始播放事件
@@ -90,7 +91,7 @@ Page({
           openid:wx.getStorageSync('userinfo').openid,
           ymd_time:util.formatTime(new Date()),
           hs_time:util.formatTime1(new Date()),
-          qunID:123456
+          qunID:that.data.room_id
         },
         success:res =>{
           console.log('发送成功',res)
@@ -107,6 +108,9 @@ Page({
   onMsg:function(){
     const that = this
     const watcher = DB.collection('news')
+    .where({
+      qunID:that.data.room_id
+    })
     .watch({
       onChange: function(snapshot){
         // console.log(snapshot)
@@ -124,7 +128,9 @@ Page({
     })
   },
 
-  onLoad:function(){
+  onLoad:function(e){
+    console.log(e.id)
+    this.data.room_id = e.id
     this.onMsg()
   },
 
@@ -185,7 +191,7 @@ Page({
                 openid:wx.getStorageSync('userinfo').openid,
                 ymd_time:util.formatTime(new Date()),
                 hs_time:util.formatTime1(new Date()),
-                qunID:123456
+                qunID:that.data.room_id
               },
               success:res=>{
                 console.log('语音上传成功',res)
@@ -241,6 +247,7 @@ Page({
 
   // 发送表情
   sendEmoji:function(e){
+    const that = this
     var src = e.currentTarget.dataset.src
     wx.cloud.callFunction({
       name:"submitNews",
@@ -251,7 +258,7 @@ Page({
         openid:wx.getStorageSync('userinfo').openid,
         ymd_time:util.formatTime(new Date()),
         hs_time:util.formatTime1(new Date()),
-        qunID:123456
+        qunID:that.data.room_id
       },
       success:res =>{
         console.log('表情路径上传成功',res)
@@ -311,7 +318,7 @@ Page({
                 openid:wx.getStorageSync('userinfo').openid,
                 ymd_time:util.formatTime(new Date()),
                 hs_time:util.formatTime1(new Date()),
-                qunID:123456
+                qunID:that.data.room_id
               },
               success:res =>{
                 console.log('图片上传成功',res)

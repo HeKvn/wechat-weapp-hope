@@ -1,7 +1,17 @@
 
 Page({
   data: {
+    room_id:null,
+    room_pwd:null,
+    IDs:[]
+  },
 
+  roomID:function(e){
+    // console.log(e)
+    this.data.room_id = e.detail.value
+  },
+  roomPWD:function(e){
+    this.data.room_pwd = e.detail.value
   },
 
   onLoad:function(){
@@ -18,6 +28,18 @@ Page({
   },
 
   onShow:function(){
+    const that = this
+    wx.cloud.callFunction({
+      name:"getRoomsID",
+      success:res=>{
+        that.setData({
+          IDs:res.result.data
+        })
+      },
+      fail:res=>{
+        console.log('获取会议id失败')
+      }
+    })
     wx.loadFontFace({
       family: 'word2',
       source: 'url(https://6865-health-vsebq-1303000269.tcb.qcloud.la/Sofia.otf?sign=63544993ff50355eb30f8ddfe345765b&t=1598882078)',
@@ -30,10 +52,36 @@ Page({
     })
   },
 
+  //前往会议室
   go:function(){
-    wx.navigateTo({
-      url: '/pages/room/room',
-    })
+    const that = this
+    if(that.data.room_id == null){
+      wx.showToast({
+        title: '请输入参加的会议ID！',
+        icon:'none'
+      })
+    }else{
+      var success = false
+      for(var i=0;i<that.data.IDs.length;i++){
+        if(that.data.IDs[i].roomID === that.data.room_id){
+          success = true
+          break
+        }
+      }
+      if(success){
+        wx.navigateTo({
+          url: '/pages/room/room?id='+that.data.room_id,
+        })
+        that.setData({
+          value:null
+        })
+      }else{
+        wx.showToast({
+          title: '没有此会议室',
+          icon:'none'
+        })
+      }
+    }
   }
 
 

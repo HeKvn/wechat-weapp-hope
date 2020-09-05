@@ -6,7 +6,8 @@
     "pages/news/news",
     "pages/mind/mind",
     "pages/write/write",
-    "pages/room/room"
+    "pages/room/room",
+    "pages/create/create"
   ],
   "window":{
     "backgroundTextStyle":"light",

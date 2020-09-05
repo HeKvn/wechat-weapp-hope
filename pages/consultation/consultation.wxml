@@ -1,15 +1,10 @@
-<!-- 背景图片 -->
-<view class="background">
-  <!-- <image class="background" mode="aspectFill" src="http://image.hekvn.top/hope_beijing.jpg"></image> -->
-</view>
-
 <!-- 输入框 -->
 <view class="input_module">
   <view class="name">
-    <input placeholder="会议ID" placeholder-class="place-holder"></input>
+    <input type="number" bindinput="roomID" placeholder="会议ID" placeholder-class="place-holder" value="{{value}}"></input>
   </view>
   <view class="roomID">
-    <input placeholder="密码" placeholder-class="place-holder"></input>
+    <input type="number" bindinput="roomPWD" placeholder="密码" placeholder-class="place-holder" value="{{value}}"></input>
   </view>
   
 </view>
