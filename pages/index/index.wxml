@@ -1,0 +1,56 @@
+<view class="search_module">
+  <input></input>
+  <view class="search_btn" >检索</view>
+</view>
+
+<block>
+  <view class="medical_record">
+    <view class="photo">
+      <image src="http://image.hekvn.top/miniapp_patient.jpg"></image>
+    </view>
+    <view class="info">
+      <view><text>姓名：</text><text class="txt">张三</text></view>
+      <view><text>民族：</text><text class="txt">汉</text></view>
+      <view><text>性别：</text><text class="txt">男</text></view>
+      <view><text>年龄：</text><text class="txt">30</text></view>
+      <view><text>婚姻：</text><text class="txt">已婚</text></view>
+      <view><text>药物过敏史：</text><text class="txt">无</text></view>
+      <view><text>既往病史：</text><text class="txt">鼻炎杀害速度啊函数的话收到还是怕好的 好</text></view>
+    </view>
+  </view>
+
+  <view class="medical_record">
+    <view class="photo">
+      <image src="http://image.hekvn.top/miniapp_patient.jpg"></image>
+    </view>
+    <view class="info">
+      <view><text>姓名：</text><text class="txt">李四</text></view>
+      <view><text>民族：</text><text class="txt">汉</text></view>
+      <view><text>性别：</text><text class="txt">男</text></view>
+      <view><text>年龄：</text><text class="txt">23</text></view>
+      <view><text>婚姻：</text><text class="txt">未婚</text></view>
+      <view><text>药物过敏史：</text><text class="txt">阿司匹林</text></view>
+      <view><text>既往病史：</text><text class="txt">鼻炎杀害速度啊函数的</text></view>
+    </view>
+  </view>
+
+  <view class="medical_record">
+    <view class="photo">
+      <image src="http://image.hekvn.top/miniapp_patient.jpg"></image>
+    </view>
+    <view class="info">
+      <view><text>姓名：</text><text class="txt">李四</text></view>
+      <view><text>民族：</text><text class="txt">汉</text></view>
+      <view><text>性别：</text><text class="txt">男</text></view>
+      <view><text>年龄：</text><text class="txt">23</text></view>
+      <view><text>婚姻：</text><text class="txt">未婚</text></view>
+      <view><text>药物过敏史：</text><text class="txt">阿司匹林</text></view>
+      <view><text>既往病史：</text><text class="txt">鼻炎杀害速度啊函数的</text></view>
+    </view>
+  </view>
+
+  <!-- 悬浮按钮 -->
+  <view class="add-wrap" hover-class="plus-hover" bindtap="goWrite">
+    <image src="../../icons/jia.png"></image>
+  </view>
+</block>

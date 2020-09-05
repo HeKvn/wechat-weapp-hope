@@ -1,0 +1,88 @@
+page{
+  height:100%;
+  background-color: var(--themeColor);
+}
+/* .background {
+  background-color: var(--themeColor);
+  width: 100%;
+  height: 100%;
+  position:fixed; 
+  background-size:100% 100%;
+  z-index: -1;  
+} */
+/* z-index:-1 置于底层，-1是最小的数，代表最底层，其他未表面的都在0层以上 */
+
+.name{
+  margin-top: 120rpx;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  background-color: #66CCFF;
+  color: white;
+  padding: 40rpx;
+  border-radius: 50rpx;
+  text-align: center;
+}
+.place-holder{
+  color: white;
+  text-align: center;
+}
+.roomID{
+  margin: 50rpx 50rpx;
+  background-color:  #66CCFF;
+  color: white;
+  padding: 40rpx;
+  border-radius: 50rpx;
+  text-align: center;
+}
+
+.Hope{
+  margin-top: 70rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 5em;
+  font-family: 'word2';
+  /* font: 5em Brush Script MT; */
+  text-shadow: 0 1px 0 #ccc,
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaa,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);
+}
+.txt{
+  font-size: 2.5em;
+  font-family: 'word1';
+  text-align: center;
+  color: #fff;
+  -webkit-box-reflect:below 3px -webkit-linear-gradient(transparent,transparent 50%,rgba(255,255,255,.3));
+	/* line-height:1; */
+  /* text-shadow: 0 1px 0 #ccc, 
+    0 2px 0 #c9c9c9,
+     0 3px 0 #bbb, 
+     0 4px 0 #b9b9b9, 
+     0 5px 0 #aaa, 
+     0 6px 1px rgba(0,0,0,0.1), 
+     0 0 5px rgba(0,0,0,0.1),
+     0 1px 3px rgba(0,0,0,0.3),
+     0 3px 5px rgba(0,0,0,0.2),
+     0 5px 10px rgba(0,0,0,0.25); */
+
+     /* text-shadow: 0 1px 0 #ccc,
+     0 2px 0 #c9c9c9,
+     0 3px 0 #bbb,
+     0 4px 0 #b9b9b9,
+     0 5px 0 #aaa,
+     0 6px 1px rgba(0,0,0,.1),
+     0 0 5px rgba(0,0,0,.1),
+     0 1px 3px rgba(0,0,0,.3),
+     0 3px 5px rgba(0,0,0,.2),
+     0 5px 10px rgba(0,0,0,.25),
+     0 10px 10px rgba(0,0,0,.2),
+     0 20px 20px rgba(0,0,0,.15); */
+}

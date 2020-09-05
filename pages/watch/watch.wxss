@@ -1,0 +1,94 @@
+.medical_record{
+  display: flex;
+  margin: 15rpx 5rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 10rpx;
+}
+
+.photo{
+  margin: 20rpx 20rpx;
+}
+
+.photo image{
+  width: 350rpx;
+  height: 400rpx;
+}
+
+.info{
+  margin: 10rpx 10rpx;
+}
+.txt{
+  color: #F4A460
+}
+
+.navbar{
+  flex: none;
+  display: flex;
+  background: #fff;
+  font-size: 30rpx;
+  color: #bbbbbb;
+}
+.Item{
+  position: relative;
+  flex: auto;
+  text-align: center;
+  line-height: 90rpx;
+}
+.Item.active{
+  color: var(--themeColor);
+}
+.Item.active:after{
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5rpx;
+  background: var(--themeColor);
+}
+
+.status{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.status text{
+  color: #9AFF9A;
+}
+.ps{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35rpx;
+  color: var(--themeColor);
+}
+
+.rabot_data{
+  /* border: 1rpx solid #ccc; */
+  margin: 30rpx 0;
+}
+.heart_jump{
+  width: 605rpx;
+  border: 1rpx solid #ccc;
+  margin: auto ;
+  border-radius: 15rpx;
+}
+.heart_jump image{
+  width: 600rpx;
+}
+
+.assay_data{
+  margin: 30rpx 0;
+}
+.blood{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+.cell{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

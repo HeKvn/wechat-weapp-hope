@@ -1,0 +1,32 @@
+<view class="top_module">
+  <view class="text">+</view>
+</view>
+
+<!-- 信息板块 -->
+<block>
+  <view class="chat_infomation">
+    <view class="avatar">
+      <image mode="widthFix" src="http://image.hekvn.top/hope_avatar.PNG"></image>
+    </view>
+    <view class="infomation">
+      <view class="name_time">
+        <view class="name">Hope官方助手</view>
+        <view class="time">下午 11:17</view>
+      </view>
+      <view class="bulletin">您有新的预约，点击查看...</view>
+    </view>
+  </view>
+
+  <view class="chat_infomation">
+    <view class="avatar">
+      <image mode="widthFix" src="http://image.hekvn.top/myavatar.gif"></image>
+    </view>
+    <view class="infomation">
+      <view class="name_time">
+        <view class="name">世子殿下</view>
+        <view class="time">下午 11:17</view>
+      </view>
+      <view class="bulletin">这条消息会溢出隐藏这条消息会溢出隐藏这条消息会溢出隐藏</view>
+    </view>
+  </view>
+</block>

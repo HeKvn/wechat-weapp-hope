@@ -1,0 +1,48 @@
+<view class="Page">
+  <!-- 基本信息 -->
+  <view class="bs_info">
+    <view class="photo">
+      <image src="../../icons/jia2.png"></image>
+    </view>
+    <view class="info">
+      <!-- 表单 -->
+      <form bindsubmit="handleSubmit" bindreset="reset">
+        <view class="input">
+          <label>姓名：</label>
+          <input></input>
+        </view>
+        <view class="input">
+          <label>年龄：</label>
+          <input></input>
+          <!-- 可使用选择器picker -->
+        </view>
+        <view  class="radio">
+          <radio-group>
+            <radio>男</radio>
+            <radio>女</radio>
+          </radio-group>
+          <radio-group>
+            <radio>已婚</radio>
+            <radio>未婚</radio>
+          </radio-group>
+        </view>
+        <view class="input">
+          <label>民族：</label>
+          <input></input>
+        </view>
+        <button size="mini" class="Subbtn" form-type="submit">提交资料</button>
+      </form>
+    </view>
+  </view>
+
+  <!-- 药物过敏史、既往病史 -->
+  <view class="textArea">
+    <label>药物过敏史</label>
+    <textarea></textarea>
+    <label>既往病史</label>
+    <textarea></textarea>
+  </view>
+</view>
+
+
+

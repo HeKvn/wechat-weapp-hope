@@ -1,0 +1,22 @@
+<!-- 背景图片 -->
+<view class="background">
+  <!-- <image class="background" mode="aspectFill" src="http://image.hekvn.top/hope_beijing.jpg"></image> -->
+</view>
+
+<!-- 输入框 -->
+<view class="input_module">
+  <view class="name">
+    <input placeholder="会议ID" placeholder-class="place-holder"></input>
+  </view>
+  <view class="roomID">
+    <input placeholder="密码" placeholder-class="place-holder"></input>
+  </view>
+  
+</view>
+
+<!-- 按钮 -->
+<button type="default" plain="true" bindtap="go">进入会议</button>
+
+<!-- 文字 -->
+<view class="Hope">Hope</view>
+<view class="txt">为你我奉献经验</view>

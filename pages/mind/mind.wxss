@@ -1,0 +1,29 @@
+.userinfo{
+  position: relative;
+  width: 750rpx;
+  height: 320rpx;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+image{
+  overflow: hidden;
+  display: block;
+  width: 160rpx;
+  height: 160rpx;
+  margin: 20rpx;
+  margin-top: 50rpx;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 3px 3px 10px #80FFFF;
+}
+
+.openSetting{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  margin-top: 50rpx;
+}

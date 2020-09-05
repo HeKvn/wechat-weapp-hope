@@ -1,0 +1,103 @@
+<!-- 顶部 -->
+<view class="top_module">
+  <!-- 返回 -->
+  <!-- <view class="back">
+    <image mode="widthFix" src="../../icons/back.png"></image>
+  </view> -->
+  <!-- 会议名称 -->
+  <view class="group_name">群聊</view>
+  <!-- 更多(...) -->
+  <!-- <view class="more">
+    <image mode="widthFix" src="../../icons/more2.png"></image>
+  </view> -->
+</view>
+
+<!-- 聊天信息区 -->
+<view class="chat_message">
+  <block wx:for="{{list}}" wx:key="key">
+    <!-- 左边 -->
+    <view wx:if="{{item.userType == 2}}" class="left">
+      <!-- 头像 -->
+      <view class="avatar_img1">
+        <image mode="widthFix" src="{{item.avatarUrl}}"></image>
+      </view>
+      <!-- 信息 -->
+      <view wx:if="{{item.message}}" class="message1">{{item.message}}</view>
+      <!-- 声音 -->
+      <view class="voice1" wx:if="{{item.voice}}" bindtap="my_audio_click" data-src='{{item.voice}}'>
+        <image src="../../img/play1.png"></image>
+      </view>
+      <!-- 表情 -->
+      <view wx:if="{{item.emoji}}">
+        <image class="chat_emoji" src="{{item.emoji}}"></image>
+      </view>
+      <!-- 图片 -->
+      <view class="Photo" wx:if="{{item.img}}" data-imgurl="{{item.img}}" bindtap="handlePrevewImage">
+        <image mode="widthFix" src="{{item.img}}"></image>
+      </view>
+    </view>
+    <!-- 右边 -->
+    <view wx:if="{{item.userType == 1}}" class="right">
+      <!-- 头像 -->
+      <view class="avatar_img2">
+        <image mode="widthFix" src="{{item.avatarUrl}}"></image>
+      </view> 
+      <!-- 信息 -->
+      <view wx:if="{{item.message}}" class="message2">{{item.message}}</view>
+      <!--  声音 -->
+      <view class="voice2" wx:if="{{item.voice}}" bindtap="my_audio_click" data-src='{{item.voice}}'>
+        <image src="../../img/play2.png"></image>
+      </view>
+      <!-- 表情 -->
+      <view wx:if="{{item.emoji}}">
+        <image class="chat_emoji" src="{{item.emoji}}"></image>
+      </view>
+      <!-- 图片 -->
+      <view class="Photo" wx:if="{{item.img}}" data-imgurl="{{item.img}}" bindtap="handlePrevewImage">
+        <image mode="widthFix" src="{{item.img}}"></image>
+      </view>
+    </view>
+  </block>
+</view>
+
+<!-- 底部 -->
+<view class="bottom_all">
+  <!-- 初始 -->
+  <view class="bottom_module">
+    <view class="Voice" catchtouchstart="Touch_voice_start" catchtouchend="Touch_voice_end">
+      <image mode="widthFix" src="../../icons/voice.png"></image>
+    </view>
+    <view class="Input">
+      <input confirm-type="send" bindconfirm="sendOut" value="{{input_value}}"></input>
+    </view>
+    <view class="emoji" bindtap="onEmoji">
+      <image mode="widtFix" src="../../icons/emoji.png"></image>
+    </view>
+    <view class="more_add" bindtap="onMore">
+      <image mode="widthFix" src="../../icons/more.png"></image>
+    </view>
+  </view>
+
+  <!-- 升起 -->
+  <view class="bottom_module2" wx:if="{{isOn}}">
+    <!-- 升起emoji -->
+  	<block wx:for="{{emoji_list}}" wx:key="index" wx:if="{{isTabs == 'emoji'}}">
+			<image class="Emoji" data-src="{{item.imgSrc}}" src="{{item.imgSrc}}" bindtap="sendEmoji"></image>
+		</block>
+    <!-- 升起更多 -->
+    <block wx:if="{{isTabs == 'features'}}" bindtap="toMore">
+			<view class="feat1" bindtap="upPhoto">
+				<image class="photoImg" mode="widthFix" src="../../img/tupian.png"></image>
+				<view class="featTitle">图片</view>
+			</view>
+      <view class="feat1">
+        <image class="camera" mode="widthFix" src="../../img/xiangji.png"></image>
+        <view class="featTitle">相机</view>
+      </view>
+      <view class="feat1">
+        <image class="document" mode="widthFix" src="../../img/wenjianjia.png"></image>
+        <view>病例</view>
+      </view>
+		</block>
+  </view>
+</view>

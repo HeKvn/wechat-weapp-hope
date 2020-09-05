@@ -1,0 +1,61 @@
+.top_module{
+  background-color: var(--themeColor);
+}
+.top_module .text{
+  color: white;
+  font-size: 70rpx;
+  text-align: right;
+  margin-right: 40rpx;
+}
+
+.chat_infomation{
+  display: flex;
+  /* margin: 30rpx 30rpx; */
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  margin-left: 30rpx;
+}
+.avatar{
+  width: 120rpx;
+  height: 120rpx;
+}
+.avatar image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+  margin-right: 30rpx;
+}
+.infomation{
+  border-bottom: 1rpx solid #ccc;
+  width: 80%;
+  position: relative;
+}
+.name_time{
+  display: flex;
+}
+.name{
+  font-weight: bolder;
+  font-size: 35rpx;
+  flex: 3;
+}
+.time{
+  /* text-align: right; */
+  font-size: 28rpx;
+  flex: 1;
+  margin-right: 20rpx;
+  color: #ccc;
+}
+.bulletin{
+  color: #ccc;
+  font-size: 28rpx;
+  position: absolute;
+  bottom: 10rpx;
+  /* margin-top: 30rpx; */
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-around; */
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}

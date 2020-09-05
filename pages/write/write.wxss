@@ -1,0 +1,58 @@
+.Page{
+  /* height: 100%; */
+  position: relative;
+  padding-bottom: 200rpx;
+}
+
+.bs_info{
+  display: flex;
+  margin: 40rpx 40rpx;
+}
+.photo{
+  display: flex;
+  width: 200rpx;
+  height: 280rpx;
+  border: 1rpx solid #ccc;
+  justify-content: center;
+  align-items: center;
+}
+.photo image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+/* 信息表 */
+.info{
+  margin-left: 30rpx;
+}
+.input{
+  display: flex;
+  margin-bottom: 20rpx;
+}
+.input input{
+  border: 1rpx solid #ccc;
+  border-radius: 10rpx;
+  padding: 5rpx;
+  flex: 3;
+}
+.input label{
+  flex: 1;
+}
+radio{
+  padding: 10rpx;
+}
+
+.textArea{
+  text-align: center;
+}
+.textArea textarea{
+  border: 1rpx solid #ccc;
+  border-radius: 10rpx;
+  margin: auto;
+}
+
+.Subbtn{
+  position: absolute;
+  bottom: 50rpx;
+  /* margin-right: 10rpx; */
+}

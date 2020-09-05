@@ -1,0 +1,56 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/watch/watch",
+    "pages/consultation/consultation",
+    "pages/news/news",
+    "pages/mind/mind",
+    "pages/write/write",
+    "pages/room/room"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#1296db",
+    "navigationBarTitleText": "Hope",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#969696",
+    "selectedColor": "#000000",
+    "list": [
+      {
+      "pagePath": "pages/index/index",
+      "text": "病人病史",
+      "iconPath": "icons/ziliao1.png",
+      "selectedIconPath": "icons/ziliao2.png"
+    },
+    {
+      "pagePath": "pages/watch/watch",
+      "text": "实时监测",
+      "iconPath": "icons/jiance1.png",
+      "selectedIconPath": "icons/jiance2.png"      
+    },
+    {
+      "pagePath": "pages/consultation/consultation",
+      "text": "专家会诊",
+      "iconPath": "icons/huizhen1.png",
+      "selectedIconPath": "icons/huizhen2.png"      
+    },
+    {
+      "pagePath": "pages/news/news",
+      "text": "消息",
+      "iconPath": "icons/xiaoxi1.png",
+      "selectedIconPath": "icons/xiaoxi2.png"      
+    },
+    {
+      "pagePath": "pages/mind/mind",
+      "text": "个人信息",
+      "iconPath": "icons/mind1.png",
+      "selectedIconPath": "icons/mind2.png"      
+    }
+
+  ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

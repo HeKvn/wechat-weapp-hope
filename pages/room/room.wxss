@@ -1,0 +1,177 @@
+page{
+  /* position: relative; */
+  padding-bottom: 110rpx;
+  background-color: rgb(255, 245, 247);
+}
+
+/* 顶部模块 */
+.top_module{
+  background-color: var(--themeColor);
+  /* display: flex; */
+  width: 100%;
+  position: fixed;
+}
+.group_name{
+  color: white;
+  text-align: center;
+}
+
+
+/* 底部模块 */
+.bottom_all{
+  width: 750rpx;
+	position: fixed;
+	bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  border-top: 1px solid #ccc;
+  background-color: rgb(255, 245, 247);
+}
+.bottom_module{
+  /* display: flex;
+  width: 100%;
+  height: 110rpx;
+  position: fixed;
+  bottom: 0;
+  border-top: 1rpx solid #ccc;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 245, 247); */
+  height: 110rpx;
+	display: flex;
+	align-items: center;
+}
+.bottom_module2{
+  height: 250rpx;
+	display: flex;
+	padding: 20rpx;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+}
+.Voice image{
+  width: 60rpx;
+  height: 60rpx;
+  flex: 1;
+  padding-left: 10rpx;
+}
+.Input{
+  border: 1rpx solid #ccc;
+  padding: 10rpx;
+  border-radius: 10rpx;
+  flex: 3;
+  margin: 0 30rpx;
+}
+.emoji image{
+  width: 60rpx;
+  height: 60rpx; 
+  flex: 1;
+  padding-right: 15rpx;
+}
+.more_add image{
+  width: 60rpx;
+  height: 60rpx;
+  flex: 1;
+  padding-right: 20rpx;
+}
+.Emoji{
+  width: 70rpx;
+  height: 70rpx;
+  margin: 0 10rpx;
+}
+.feat1 image{
+  width: 70rpx;
+  height: 70rpx;
+}
+.feat1{
+  margin: 0 20rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #464646;
+}
+
+/* 聊天区 */
+.chat_message{
+  padding-top: 70rpx;
+}
+.left{
+  display: flex;
+  /* 信息与头像对齐 */
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.right{
+  display: flex;
+  align-items: center;
+  text-align: right;
+  /* 元素内弹性盒元素的方向为相反的顺序 */
+  flex-direction: row-reverse;
+  margin-bottom: 20rpx;
+}
+.avatar_img1 image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+}
+.avatar_img1{
+  margin: 0 20rpx;
+}
+.avatar_img2{
+  margin: 0 20rpx;
+}
+.avatar_img2 image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+}
+.message2{
+  max-width: 360rpx;
+  min-height: 60rpx;
+  display: flex;
+  align-items: center;
+  background-color: springgreen;
+  border-radius: 10rpx;
+  padding: 10rpx 20rpx;
+}
+.message1{
+  max-width: 360rpx;
+  min-height: 80rpx;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 10rpx;
+  padding: 10rpx 20rpx;
+}
+.voice2{
+  background-color: springgreen;
+  min-width: 100rpx;
+  border-radius: 10rpx;
+  padding: 10rpx 20rpx;
+}
+.voice2 image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.voice1{
+  background-color: white;
+  min-width: 100rpx;
+  border-radius: 10rpx;
+  padding: 10rpx 20rpx;
+}
+.voice1 image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.chat_emoji{
+  width: 70rpx;
+  height: 70rpx;
+}
+.Photo image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+.Photo{
+  /* background-color: springgreen; */
+  /* min-width: 100rpx; */
+  padding: 10rpx 20rpx;
+}
