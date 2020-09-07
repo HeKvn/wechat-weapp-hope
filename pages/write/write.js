@@ -1,66 +1,59 @@
-// pages/write/write.js
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    allergy:null,
+    hst_ill:null
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  allergyInput:function(e){
+    this.data.allergy = e.detail.value
+  },
+  hstInput:function(e){
+    this.data.hst_ill = e.detail.value
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  handleSubmit:function(e){
+    // console.log(e)
+    //把对象转换成数组，等下方便遍历判断
+    var value = [];
+    var allTrue = true;
+    for(let i in e.detail.value){
+      value.push(e.detail.value[i]);
+    }
+    value.forEach(v=>{
+      // console.log(v)
+      if(!v){
+        allTrue = false
+      }
+    })
+    //没有空的才给提交
+    if(allTrue){
+      const that = this
+      wx.cloud.callFunction({
+        name:"createCase",
+        data:{
+          name:e.detail.value.name,
+          nation:e.detail.value.nation,
+          sex:e.detail.value.radio_group1,
+          age:e.detail.value.age,
+          marriage:e.detail.value.radio_group2,
+          mdc_allergy:that.data.allergy,
+          history_ill:that.data.hst_ill
+        }
+      }).then(res=>{
+        that.setData({
+          value:null
+        })
+        wx.showToast({
+          title: '提交病例成功！',
+          icon:"none"
+        })
+      })
+    }else{
+      wx.showToast({
+        title: '请输入完整信息！',
+        icon:'none'
+      })
+    }
   }
 })

@@ -73,7 +73,9 @@ Page({
           url: '/pages/room/room?id='+that.data.room_id,
         })
         that.setData({
-          value:null
+          value:null,
+          room_id:null,
+          room_pwd:null
         })
       }else{
         wx.showToast({

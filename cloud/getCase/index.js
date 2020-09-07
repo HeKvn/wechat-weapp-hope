@@ -7,14 +7,8 @@ const db = cloud.database()
 // 云函数入口函数
 exports.main = async (event, context) => {
   try {
-    await db.collection('rooms').add({
-      data:{
-        roomID:event.roomID,
-        roomPWD:event.roomPWD,
-        roomName:event.roomName
-      }
-    })
+    return await db.collection('case').get()
   } catch (error) {
-    console.log('房间创建失败',error)
+    console.log(error)
   }
 }

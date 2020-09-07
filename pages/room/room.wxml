@@ -5,7 +5,7 @@
     <image mode="widthFix" src="../../icons/back.png"></image>
   </view> -->
   <!-- 会议名称 -->
-  <view class="group_name">群聊</view>
+  <view class="group_name">{{room_name}}</view>
   <!-- 更多(...) -->
   <!-- <view class="more">
     <image mode="widthFix" src="../../icons/more2.png"></image>

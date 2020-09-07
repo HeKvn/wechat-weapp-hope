@@ -59,7 +59,8 @@ Page({
       name:'[思考]',
       imgSrc:'../../img/16.png'
     }],
-    room_id:null
+    room_id:null,
+    room_name:null
   },
 
   // 点击录音开始播放事件
@@ -121,6 +122,8 @@ Page({
         that.setData({
           list:listArr
         })
+        //将最新一条存入缓存，让消息页面调用
+        wx.setStorageSync('message', that.data.list[that.data.list.length-1])
       },
       onError:function(err){
         console.error('----------err',err)
@@ -128,9 +131,33 @@ Page({
     })
   },
 
+  //获取会议名称，并将ID和名称存入缓存中
+  getRoomInfo:function(){
+    const that = this
+    wx.cloud.callFunction({
+      name:"getRoomName",
+      data:{
+        room_id:that.data.room_id
+      },
+      success:res=>{
+        that.setData({
+          room_name:res.result.data[0].roomName
+        })
+        // console.log(res.result.data[0].roomName)
+        //存入缓存
+        wx.setStorageSync('roomname', res.result.data[0].roomName)
+        wx.setStorageSync('roomid', that.data.room_id)
+      },
+      fail:res=>{
+        console.log('获取房间名称失败')
+      }
+    })
+  },
+
   onLoad:function(e){
-    console.log(e.id)
+    // console.log(e.id)
     this.data.room_id = e.id
+    this.getRoomInfo()
     this.onMsg()
   },
 
@@ -163,7 +190,7 @@ Page({
   //渲染成功后一直监听页面中的录音事件
   on_recorder:function(){
     const that = this;
-    console.log('录音监听事件');
+    // console.log('录音监听事件');
     recorder.onStart((res) => {
       console.log('监听录音开始事件,开始录音')
     })

@@ -10,10 +10,22 @@
   </view>
 </view>
 
+<view class="chat_infomation">
+  <view class="avatar">
+    <image mode="widthFix" src="http://image.hekvn.top/hope_avatar.PNG"></image>
+  </view>
+  <view class="infomation">
+    <view class="name_time">
+      <view class="name">Hope官方助手</view>
+      <view class="time">下午 11:17</view>
+    </view>
+    <view class="bulletin">您有新的预约，点击查看...</view>
+  </view>
+</view>
 
 <!-- 信息板块 -->
-<block>
-  <view class="chat_infomation">
+<block wx:for="{{message}}" wx:key="key">
+  <!-- <view class="chat_infomation">
     <view class="avatar">
       <image mode="widthFix" src="http://image.hekvn.top/hope_avatar.PNG"></image>
     </view>
@@ -24,7 +36,7 @@
       </view>
       <view class="bulletin">您有新的预约，点击查看...</view>
     </view>
-  </view>
+  </view> -->
 
   <view class="chat_infomation">
     <view class="avatar">
@@ -32,10 +44,13 @@
     </view>
     <view class="infomation">
       <view class="name_time">
-        <view class="name">世子殿下</view>
-        <view class="time">下午 11:17</view>
+        <view class="name">{{item.roomName}}</view>
+        <view class="time">今天 {{item.HS_time}}</view>
       </view>
-      <view class="bulletin">这条消息会溢出隐藏这条消息会溢出隐藏这条消息会溢出隐藏</view>
+      <view wx:if="{{item.message}}" class="bulletin">{{item.message}}</view>
+      <view wx:if="{{item.voice}}" class="bulletin">[语音消息]</view>
+      <view wx:if="{{item.emoji}}" class="bulletin">[表情]</view>
+      <view wx:if="{{item.img}}" class="bulletin">[图片]</view>
     </view>
   </view>
 </block>

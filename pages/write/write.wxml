@@ -9,26 +9,26 @@
       <form bindsubmit="handleSubmit" bindreset="reset">
         <view class="input">
           <label>姓名：</label>
-          <input></input>
+          <input name="name" value="{{value}}"></input>
         </view>
         <view class="input">
           <label>年龄：</label>
-          <input></input>
+          <input name="age" value="{{value}}"></input>
           <!-- 可使用选择器picker -->
         </view>
         <view  class="radio">
-          <radio-group>
-            <radio>男</radio>
-            <radio>女</radio>
+          <radio-group name="radio_group1">
+            <radio value="男">男</radio>
+            <radio value="女">女</radio>
           </radio-group>
-          <radio-group>
-            <radio>已婚</radio>
-            <radio>未婚</radio>
+          <radio-group name="radio_group2">
+            <radio value="已婚">已婚</radio>
+            <radio value="未婚">未婚</radio>
           </radio-group>
         </view>
         <view class="input">
           <label>民族：</label>
-          <input></input>
+          <input name="nation" value="{{value}}"></input>
         </view>
         <button size="mini" class="Subbtn" form-type="submit">提交资料</button>
       </form>
@@ -38,9 +38,9 @@
   <!-- 药物过敏史、既往病史 -->
   <view class="textArea">
     <label>药物过敏史</label>
-    <textarea></textarea>
+    <textarea bindinput="allergyInput" value="{{value}}"></textarea>
     <label>既往病史</label>
-    <textarea></textarea>
+    <textarea bindinput="hstInput" value="{{value}}"></textarea>
   </view>
 </view>
 

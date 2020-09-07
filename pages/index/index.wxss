@@ -45,6 +45,13 @@ input{
   text-align: center;
 }
 
+.back{
+  background-color: var(--themeColor);
+}
+.back image{
+  width: 45rpx;
+}
+
 .medical_record{
   display: flex;
   margin: 15rpx 5rpx;
