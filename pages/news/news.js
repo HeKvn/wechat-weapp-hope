@@ -23,6 +23,12 @@ Page({
       url: '/pages/create/create',
     })
   },
+  // 前往预约会议页面
+  bookMetting:function(){
+    wx.navigateTo({
+      url: '/pages/book/book',
+    })
+  },
 
   //获取缓存中的信息,并存入到data中
   getStorInfo:function(){
@@ -66,5 +72,12 @@ Page({
 
   onShow:function(){
     this.getStorInfo()
+  },
+
+  //点击会话框前往会议室
+  goHome:function(e){
+      wx.navigateTo({
+        url: '/pages/room/room?id='+e.currentTarget.dataset.room_id,
+      })
   }
 })

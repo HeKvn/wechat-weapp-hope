@@ -1,0 +1,23 @@
+page{
+  background-color: var(--themeColor);
+}
+
+.title{
+  font-size: 50rpx;
+  color: white;
+  text-align: center;
+  margin: 40rpx 0;
+}
+
+.place-holder{
+  color: white;
+  text-align: center;
+}
+.input1{
+  margin: 50rpx 50rpx;
+  background-color:  #66CCFF;
+  color: white;
+  padding: 40rpx;
+  border-radius: 50rpx;
+  text-align: center;
+}

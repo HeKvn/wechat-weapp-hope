@@ -1,0 +1,30 @@
+<view class="title">
+  <text>预约会议</text>
+</view>
+<view>
+  <view class="input1">
+    <input bindinput="roomName" placeholder="会议名称" placeholder-class="place-holder" value="{{value}}"></input>
+  </view>
+  <view class="input1">
+    <input bindinput="roomID" type="number" placeholder="会议ID" placeholder-class="place-holder" value="{{value}}"></input>
+  </view>
+  <view class="input1">
+    <!-- <view>预约日期</view> -->
+    <picker mode="date" value="{{date}}" start="2020-09-01" end="2100-09-01" bindchange="bindDateChange">
+      <view class="picker">
+        预约日期：{{date}}
+      </view>
+    </picker>
+  </view>
+  <view class="input1">
+    <!-- <view>预约时间</view> -->
+    <picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
+      <view class="picker">
+        预约时间：{{time}}
+      </view>
+    </picker>
+  </view>
+</view>
+<view>
+  <button bindtap="submitBook">提交预约</button>
+</view>

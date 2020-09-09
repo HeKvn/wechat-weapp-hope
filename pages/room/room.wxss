@@ -175,3 +175,27 @@ page{
   /* min-width: 100rpx; */
   padding: 10rpx 20rpx;
 }
+.case1{
+  max-width: 360rpx;
+  min-height: 80rpx;
+  /* display: flex; */
+  align-items: center;
+  background-color: white;
+  border-radius: 10rpx;
+  padding: 10rpx 20rpx;
+}
+.case1 text{
+  color: #F4A460;
+}
+.case2{
+  max-width: 360rpx;
+  min-height: 60rpx;
+  /* display: flex; */
+  align-items: center;
+  background-color: springgreen;
+  border-radius: 10rpx;
+  padding: 10rpx 20rpx;
+}
+.case2 text{
+  color: #F4A460;
+}

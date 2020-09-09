@@ -1,4 +1,3 @@
-
 Page({
   data: {
     room_id:null,
@@ -85,7 +84,6 @@ Page({
       }
     }
   }
-
 
 
 })

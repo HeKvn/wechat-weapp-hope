@@ -1,0 +1,21 @@
+.medical_record{
+  display: flex;
+  margin: 15rpx 5rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 10rpx;
+}
+
+.photo{
+  margin: 20rpx 20rpx;
+}
+.photo image{
+  width: 350rpx;
+  height: 400rpx;
+}
+
+.info{
+  margin: 10rpx 10rpx;
+}
+.txt{
+  color: #F4A460
+}

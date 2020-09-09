@@ -13,6 +13,7 @@ exports.main = async (event, context) => {
         voice:event.voice,
         emoji:event.emoji,
         img:event.img,
+        case:event.case,
         name:event.nickName,
         avatarUrl:event.avatarUrl,
         openid:event.openid,

@@ -7,7 +7,9 @@
     "pages/mind/mind",
     "pages/write/write",
     "pages/room/room",
-    "pages/create/create"
+    "pages/create/create",
+    "pages/share/share",
+    "pages/book/book"
   ],
   "window":{
     "backgroundTextStyle":"light",

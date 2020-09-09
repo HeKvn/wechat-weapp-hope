@@ -14,47 +14,67 @@
 
 <!-- 聊天信息区 -->
 <view class="chat_message">
-  <block wx:for="{{list}}" wx:key="key">
+  <block wx:for="{{list}}" wx:key="key" wx:for-index="index1" wx:for-item="item1">
     <!-- 左边 -->
-    <view wx:if="{{item.userType == 2}}" class="left">
+    <view wx:if="{{item1.userType == 2}}" class="left">
       <!-- 头像 -->
       <view class="avatar_img1">
-        <image mode="widthFix" src="{{item.avatarUrl}}"></image>
+        <image mode="widthFix" src="{{item1.avatarUrl}}"></image>
       </view>
       <!-- 信息 -->
-      <view wx:if="{{item.message}}" class="message1">{{item.message}}</view>
+      <view wx:if="{{item1.message}}" class="message1">{{item1.message}}</view>
       <!-- 声音 -->
-      <view class="voice1" wx:if="{{item.voice}}" bindtap="my_audio_click" data-src='{{item.voice}}'>
+      <view class="voice1" wx:if="{{item1.voice}}" bindtap="my_audio_click" data-src='{{item1.voice}}'>
         <image src="../../img/play1.png"></image>
       </view>
       <!-- 表情 -->
-      <view wx:if="{{item.emoji}}">
-        <image class="chat_emoji" src="{{item.emoji}}"></image>
+      <view wx:if="{{item1.emoji}}">
+        <image class="chat_emoji" src="{{item1.emoji}}"></image>
       </view>
       <!-- 图片 -->
-      <view class="Photo" wx:if="{{item.img}}" data-imgurl="{{item.img}}" bindtap="handlePrevewImage">
-        <image mode="widthFix" src="{{item.img}}"></image>
+      <view class="Photo" wx:if="{{item1.img}}" data-imgurl="{{item1.img}}" bindtap="handlePrevewImage">
+        <image mode="widthFix" src="{{item1.img}}"></image>
+      </view>
+      <!-- 病例 -->
+      <view wx:if="{{item1.case}}" wx:for="{{item1.case}}" wx:key="key" wx:for-index="index2" wx:for-item="item2" class="case1">
+        <text>姓名：</text>{{item2.name}}，
+        <text>年龄：</text>{{item2.age}}，
+        <text>性别：</text>{{item2.sex}}，
+        <text>民族：</text>{{item2.nation}}，
+        <text>婚姻状态：</text>{{item2.marriage}}，
+        <text>药物过敏史：</text>{{item2.mdc_allergy}}，
+        <text>既往病史：</text>{{item2.history_ill}}
       </view>
     </view>
     <!-- 右边 -->
-    <view wx:if="{{item.userType == 1}}" class="right">
+    <view wx:if="{{item1.userType == 1}}" class="right">
       <!-- 头像 -->
       <view class="avatar_img2">
-        <image mode="widthFix" src="{{item.avatarUrl}}"></image>
+        <image mode="widthFix" src="{{item1.avatarUrl}}"></image>
       </view> 
       <!-- 信息 -->
-      <view wx:if="{{item.message}}" class="message2">{{item.message}}</view>
+      <view wx:if="{{item1.message}}" class="message2">{{item1.message}}</view>
       <!--  声音 -->
-      <view class="voice2" wx:if="{{item.voice}}" bindtap="my_audio_click" data-src='{{item.voice}}'>
+      <view class="voice2" wx:if="{{item1.voice}}" bindtap="my_audio_click" data-src='{{item1.voice}}'>
         <image src="../../img/play2.png"></image>
       </view>
       <!-- 表情 -->
-      <view wx:if="{{item.emoji}}">
-        <image class="chat_emoji" src="{{item.emoji}}"></image>
+      <view wx:if="{{item1.emoji}}">
+        <image class="chat_emoji" src="{{item1.emoji}}"></image>
       </view>
       <!-- 图片 -->
-      <view class="Photo" wx:if="{{item.img}}" data-imgurl="{{item.img}}" bindtap="handlePrevewImage">
-        <image mode="widthFix" src="{{item.img}}"></image>
+      <view class="Photo" wx:if="{{item1.img}}" data-imgurl="{{item1.img}}" bindtap="handlePrevewImage">
+        <image mode="widthFix" src="{{item1.img}}"></image>
+      </view>
+      <!-- 病例 -->
+      <view wx:if="{{item1.case}}" wx:for="{{item1.case}}" wx:key="key" wx:for-index="index2" wx:for-item="item2" class="case2">
+        <text>姓名：</text>{{item2.name}}，
+        <text>年龄：</text>{{item2.age}}，
+        <text>性别：</text>{{item2.sex}}，
+        <text>民族：</text>{{item2.nation}}，
+        <text>婚姻状态：</text>{{item2.marriage}}，
+        <text>药物过敏史：</text>{{item2.mdc_allergy}}，
+        <text>既往病史：</text>{{item2.history_ill}}
       </view>
     </view>
   </block>
@@ -94,7 +114,7 @@
         <image class="camera" mode="widthFix" src="../../img/xiangji.png"></image>
         <view class="featTitle">相机</view>
       </view>
-      <view class="feat1">
+      <view class="feat1" bindtap="share">
         <image class="document" mode="widthFix" src="../../img/wenjianjia.png"></image>
         <view>病例</view>
       </view>

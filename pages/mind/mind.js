@@ -32,4 +32,10 @@ Page({
     })
   },
 
+  openSetting:function(){
+    wx.openSetting({
+      complete: (res) => {},
+    })
+  }
+  
 })

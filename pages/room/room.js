@@ -366,5 +366,12 @@ Page({
     wx.previewImage({
       urls: [e.currentTarget.dataset.imgurl],
     })
+  },
+
+  share:function(){
+    const that = this
+    wx.navigateTo({
+      url: '/pages/share/share?roomid='+that.data.room_id,
+    })
   }
 })

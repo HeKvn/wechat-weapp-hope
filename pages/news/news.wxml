@@ -6,7 +6,7 @@
 <view class="fixed_moudle">
   <view wx:if="{{isOn}}" class="isOn">
     <view class="operate" bindtap="createMetting">创建会议</view>
-    <view class="operate">预约会议</view>
+    <view class="operate" bindtap="bookMetting">预约会议</view>
   </view>
 </view>
 
@@ -38,7 +38,7 @@
     </view>
   </view> -->
 
-  <view class="chat_infomation">
+  <view class="chat_infomation" bindtap="goHome" data-room_id="{{item.qunID}}">
     <view class="avatar">
       <image mode="widthFix" src="http://image.hekvn.top/myavatar.gif"></image>
     </view>
@@ -48,9 +48,9 @@
         <view class="time">今天 {{item.HS_time}}</view>
       </view>
       <view wx:if="{{item.message}}" class="bulletin">{{item.message}}</view>
-      <view wx:if="{{item.voice}}" class="bulletin">[语音消息]</view>
+      <!-- <view wx:if="{{item.voice}}" class="bulletin">[语音消息]</view>
       <view wx:if="{{item.emoji}}" class="bulletin">[表情]</view>
-      <view wx:if="{{item.img}}" class="bulletin">[图片]</view>
+      <view wx:if="{{item.img}}" class="bulletin">[图片]</view> -->
     </view>
   </view>
 </block>

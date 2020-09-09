@@ -47,6 +47,16 @@
   height: 5rpx;
   background: var(--themeColor);
 }
+.next{
+  margin-top: 10rpx;
+  text-align: right;
+  display: flex;
+  flex-direction: row;
+}
+.next image{
+  width: 70rpx;
+  margin: 0 50rpx;
+}
 
 .status{
   display: flex;
